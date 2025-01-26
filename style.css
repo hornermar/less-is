@@ -13,6 +13,7 @@ body {
   margin: 0;
   background-color: lightgray;
   color: white;
+  overflow: hidden;
 }
 
 .container {
@@ -35,10 +36,27 @@ h1 {
   font-size: 48px;
 }
 
-h2 {
-  margin-top: 64px;
+h3 {
   font-weight: normal;
+  font-size: 24px;
 }
+
+.style {
+  height: 32px;
+  margin-top: 50px;
+}
+
+footer {
+  position: absolute;
+  right: 20px;
+  top: -18px;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: right center;
+  width: 100vh;
+  font-size: 12px;
+}
+
+/* Switch */
 
 .switch {
   position: relative;

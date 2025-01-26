@@ -1,0 +1,125 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", serif;
+  height: 100vh;
+  margin: 0;
+  background-color: lightgray;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  height: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: normal;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  max-width: 310px;
+}
+
+.title {
+  font-size: 48px;
+}
+
+h2 {
+  margin-top: 64px;
+  font-weight: normal;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 68px;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000053;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 68px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 54px;
+  width: 54px;
+  left: 8px;
+  bottom: 8px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  /* background-color: rgb(243, 109, 26); */
+
+  background-color: rgb(207, 88, 102);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(207, 88, 102);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(54px);
+  -ms-transform: translateX(54px);
+  transform: translateX(54px);
+}
+
+/* cursor */
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* border-radius: 50%; */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  display: none;
+  size: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(44, 237, 92);
+}
+
+.cursor-dot-outline {
+  display: none;
+  size: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(75, 159, 216);
+}

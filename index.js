@@ -2,6 +2,7 @@ import { initCursor, removeCursor } from "./cursor.js";
 
 const titleEl = document.querySelector(".title");
 const authorEl = document.querySelector(".author");
+const authorLifeEl = document.querySelector(".author-life");
 const styleEl = document.querySelector(".style");
 const switchInputEl = document.querySelector(".switch-input");
 const switchEl = document.querySelector(".switch");
@@ -9,7 +10,8 @@ const switchEl = document.querySelector(".switch");
 function switchChangeHandler() {
   if (switchInputEl.checked) {
     titleEl.innerHTML = "a bore";
-    authorEl.innerHTML = "Robert Venturi (1925–2018)";
+    authorEl.innerHTML = "Robert Venturi";
+    authorLifeEl.innerHTML = "1925–2018";
     styleEl.innerHTML = "Postmodernism";
 
     document.body.style.backgroundColor = "rgb(243, 192, 26)";
@@ -18,7 +20,8 @@ function switchChangeHandler() {
     switchEl.style.cursor = "none";
   } else {
     titleEl.innerHTML = "more";
-    authorEl.innerHTML = "Ludwig Mies van der Rohe (1886–1969)";
+    authorEl.innerHTML = "Ludwig Mies van der Rohe";
+    authorLifeEl.innerHTML = "1886–1969";
     styleEl.innerHTML = "Modernism";
 
     document.body.style.backgroundColor = "lightgray";
